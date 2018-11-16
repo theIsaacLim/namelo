@@ -69,9 +69,11 @@ def female_results():
     return render_template('results.html', names=females_list, gender='Coolest Female Names')
 
 
+port = int(os.environ.get("PORT", 5000))
 rt = RepeatedTimer(10, sort_lists)  # it auto-starts, no need of rt.start()
 try:
     sort_lists()
-    app.run()
+    
+    app.run(host='0.0.0.0', port=port)
 finally:
     rt.stop()
