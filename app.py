@@ -3,6 +3,7 @@ from json import dumps
 from elo import compare, choose,  males, males_list, females, females_list
 from threading import Timer
 from random import choice
+import os
 
 # https://stackoverflow.com/questions/3393612/run-certain-code-every-n-seconds
 
