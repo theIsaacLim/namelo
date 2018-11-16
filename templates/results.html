@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ gender }}</title>
+  
+  
+  
+      <link rel="stylesheet" href="{{ url_for('static', filename='list.css') }}">
+
+  
+</head>
+
+<body>
+
+  <div class="gradient-bar"></div>
+ <a href="{{ url_for('index') }}" class="back-button">Back</a>
+<div class="question">
+  <h1>{{ gender }}</h1>
+</div>
+<div class="names">
+  {% for name in names %}
+    <h1 class="name"> . {{ name }}</h1>
+  {% endfor %}
+</div>
+
+<div class="footer">
+  <h2>Made by the incredibly awesome Isaac Lim</h2>
+</div>
+  
+  
+
+</body>
+
+</html>

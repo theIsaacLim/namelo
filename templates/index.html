@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Which name sounds cooler?</title>
+  
+  
+
+
+      <link rel="stylesheet" href="{{ url_for('static', filename='names.css') }}">
+
+  
+</head>
+
+<body>
+<script>
+function name1(){
+    window.location.replace("http://127.0.0.1:5000/choice/{{ name1 }}/{{ name2 }}/{{ gender }}/");
+}
+function name2(){
+    window.location.replace("http://127.0.0.1:5000/choice/{{ name2 }}/{{ name1 }}/{{ gender }}/");
+}
+</script>
+  <div class="gradient-bar"></div>
+<div class="question">
+  <h1>Which name sounds cooler?</h1>
+</div>
+<div class="names">
+    <a onclick="name1()" class="name first"><h1>{{ name1 }}</h1></a>
+    <a class="name second" onclick="name2()"><h1>{{ name2 }}</h1></a>
+</div>
+
+<div class="footer">
+  <h2>Made by Isaac Lim</h2>
+</div>
+ <a href="{{ link_to }}" class="back-button">Results</a>
+  
+
+</body>
+
+</html>

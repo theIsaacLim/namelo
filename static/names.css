@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+
+:root{
+  --font: 'Roboto';
+  --light: 300;
+  --heavy: 700;
+  --bg: #eee;
+  --text: #222;
+  --white-text: #fff;
+  --first-highlight: #5c258d;
+  --second-highlight: #4389a2;
+  --gradient: linear-gradient(to right, #5c258d, #4389a2);
+}
+
+body{
+  font-family: 'Roboto';
+  margin:0;padding:0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+h1, h2, p{
+  margin:0;
+}
+
+.question{
+  width: 100vw;
+  height: calc(100vh/3 - 5vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--light);
+  z-index: 50;
+}
+
+.gradient-bar{
+  height: 5vh;
+  background: var(--gradient);
+}
+
+.names{
+  display: flex;
+}
+
+.name{
+  height: calc(100vh/3);
+  background: blue;
+  width: calc(100vw/2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-decoration: none;
+  color: var(--white-text);
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+}
+
+.first{
+  background: var(--first-highlight);
+}
+
+.second{
+  background: var(--second-highlight);
+}
+
+.name:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+  transition: 0.3s;
+  z-index: 51;
+}
+
+.footer{
+  height: calc(100vh/3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.back-button{
+  position: fixed;
+  bottom:0;left:0;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  margin: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-decoration: none;
+  color: var(--white-text);
+  background: var(--second-highlight);
+  transition: 0.2s;
+  box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+}
+
+.back-button:hover{
+  transition: 0.2s;
+  background: var(--first-highlight);
+}
