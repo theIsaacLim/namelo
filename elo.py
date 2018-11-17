@@ -22,13 +22,13 @@ def compare(name1, name2, is_female, score):
     global males, females, K_FACTORS
     if is_female:
         old1, old2 = females[name1], females[name2]
-        females[name1] = old1 + K_FACTORS * (score - expected(old1, old2))
-        females[name2] = old2 + K_FACTORS * ((1-score) - expected(old2, old1))
+        females[name1] = old1 + K_FACTORS * ((1-score) - expected(old1, old2))
+        females[name2] = old2 + K_FACTORS * (score - expected(old2, old1))
         return females[name1], females[name2]
     else:
         old1, old2 = males[name1], males[name2]
-        males[name1] = old1 + K_FACTORS * (score - expected(old1, old2))
-        males[name2] = old2 + K_FACTORS * ((1-score) - expected(old2, old1))
+        males[name1] = old1 + K_FACTORS * ((1-score) - expected(old1, old2))
+        males[name2] = old2 + K_FACTORS * (score - expected(old2, old1))
         return males[name1], males[name2]
 
 
